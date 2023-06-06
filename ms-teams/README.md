@@ -3,12 +3,12 @@
 ## Download and install Microsoft Teams
 * Go to the [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) to download the **Teams for work or school.**
 * Click **Download Teams**. Make sure you download the Teams for work or school.  
-* ![Teams Download](/images/teamsdownload.png)
+* ![Teams Download](./images/teamsdownload.png)
 * Follow the instructions to download and install the Teams app.
 
 ## Using Teams Work and School Version
 * Once installed open the app on your laptop
-* ![Teams Download](/images/onceinstalled.png)
+* ![Teams Download](./images/onceinstalled.png)
 * Register / Login with the **SAME EMAIL ID** you have provided, DO NOT USE OTHER EMAIL ID
 * Open the Teams App
 * Click on the Meeting Link from your email ID
