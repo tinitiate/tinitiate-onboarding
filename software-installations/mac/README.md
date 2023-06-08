@@ -1,4 +1,6 @@
-# MAC
+# Software Installations
+## Python AWS Course Installations 
+### MAC
 - Open the Terminal.
 - Run the Following command:
 
