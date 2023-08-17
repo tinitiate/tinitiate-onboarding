@@ -22,4 +22,4 @@ Click **Join a meeting**.
 * Enter your name and email address, and click **Join**.
 
 ## Video to demonstrate to join to Teams Meeting
-[![Teams Meeting Video](./images/youtube.png)]([https://www.youtube.com/watch?v=tfqcIjc3g94])
+[![Teams Meeting Video](./images/youtube.png)](https://www.youtube.com/watch?v=tfqcIjc3g94)
