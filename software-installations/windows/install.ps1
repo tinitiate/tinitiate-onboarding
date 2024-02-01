@@ -47,17 +47,44 @@ $check = ((gp HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*).Displ
 if(-not($check)){
     Write-Output "Seems AWS Visual Studio Code is not installed, installing now"
     powershell choco install vscode -y
+    # Install Visual Studio Code extensions
+    Write-Output "Installing Visual Studio Code extensions"
+    code --install-extension alefragnani.project-manager
+    code --install-extension amazonwebservices.aws-toolkit-vscode
+    code --install-extension bierner.markdown-preview-github-styles
+    code --install-extension Boto3typed.boto3-ide
+    code --install-extension evilz.vscode-reveal
+    code --install-extension gera2ld.markmap-vscode
+    code --install-extension marp-team.marp-vscode
+    code --install-extension ms-python.python
+    code --install-extension ms-python.vscode-pylance
+    code --install-extension ms-vscode.live-server
+    code --install-extension ms-vscode.notepadplusplus-keybindings
+    code --install-extension qcz.text-power-tools
+    code --install-extension zeshuaro.vscode-python-poetry
 }
 else{
     Write-Output "Visual Studio Code is already installed"
+    Write-Output "Installing/updating Visual Studio Code extensions"
+    code --install-extension alefragnani.project-manager
+    code --install-extension amazonwebservices.aws-toolkit-vscode
+    code --install-extension bierner.markdown-preview-github-styles
+    code --install-extension Boto3typed.boto3-ide
+    code --install-extension evilz.vscode-reveal
+    code --install-extension gera2ld.markmap-vscode
+    code --install-extension marp-team.marp-vscode
+    code --install-extension ms-python.python
+    code --install-extension ms-python.vscode-pylance
+    code --install-extension ms-vscode.live-server
+    code --install-extension ms-vscode.notepadplusplus-keybindings
+    code --install-extension qcz.text-power-tools
+    code --install-extension zeshuaro.vscode-python-poetry
 }
-
 
 $check = powershell pip --version
 if(-not($check)){
     Write-Output "Seems pip is not installed, installing now"
     powershell choco install pip -y
-
 }
 else{
     Write-Output "pip is already installed"
@@ -66,12 +93,11 @@ else{
 $checkpip = powershell pip --version
 if($checkpip){
     Write-Output "Seems pip is installed, installing packages now"
-
-  
     powershell pip install PyMySQL 
-    powershell pip install django 
+    powershell pip install django
     powershell pip install djangorestframework
-    powershell pip install pytz 
+    powershell pip install pytz
+    powershell pip install djoser
     powershell pip install psycopg2
 }
 else{
@@ -82,9 +108,7 @@ $w64=Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersio
 $w32=Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*  | where-Object DisplayName -like 'NotePad++*'
 if(-not($w64-or $w32)){
     Write-Output "Seems notepad++ is not installed, installing now"
-
     choco install notepadplusplus -y
-
 }
 else{
     Write-Output "notepad++ is already installed"
@@ -131,6 +155,3 @@ if(-not($checkdocker)){
  else{
     Write-Output "Docker is already installed"
  }
- 
-
-

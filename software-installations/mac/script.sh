@@ -29,9 +29,19 @@ brew_install "docker"
 
 # Install VS Code extensions
 echo "\n Installing VS Code extensions"
-code --install-extension ms-python.python
-code --install-extension amazonwebservices.aws-toolkit-vscode
-code --install-extension ms-vscode.PowerShell
+    code --install-extension alefragnani.project-manager
+    code --install-extension amazonwebservices.aws-toolkit-vscode
+    code --install-extension bierner.markdown-preview-github-styles
+    code --install-extension Boto3typed.boto3-ide
+    code --install-extension evilz.vscode-reveal
+    code --install-extension gera2ld.markmap-vscode
+    code --install-extension marp-team.marp-vscode
+    code --install-extension ms-python.python
+    code --install-extension ms-python.vscode-pylance
+    code --install-extension ms-vscode.live-server
+    code --install-extension ms-vscode.notepadplusplus-keybindings
+    code --install-extension qcz.text-power-tools
+    code --install-extension zeshuaro.vscode-python-poetry
 
 # Install Python packages
 pip3 install PyMySQL
