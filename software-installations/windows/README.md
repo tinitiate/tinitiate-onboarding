@@ -1,17 +1,17 @@
-# Software Installations
-## Python AWS Course Installations for Windows
+# Tinitiate Training Software Installations
+* Package managers, provided by TINITIATE, contribute to a more efficient and standardized software management process, promoting consistency and reliability across Windows, Mac, and Unix-based systems.
+* **Cross-Platform Package Management:**
+* **Chocolatey for Windows** and **Homebrew for Mac/Unix** provide a unified and cross-platform approach to software package installations. * Both Chocolatey and Homebrew offer a simplified and command-line-driven installation process. Users can install, update, and uninstall software packages with a single command, reducing the complexity of managing dependencies and configurations.
+* Tinitiate Training Service leverages the extensive package repositories provided by Chocolatey and Homebrew. These repositories host a wide range of pre-configured software packages, ensuring that users have access to a diverse set of tools, libraries, and applications for their development and system administration needs.
 
-### Software and IDEs installations
+## Installation Process
+### STEP 1: Install PowerShell
+* Search online and install microsoft powershell
+### STEP 2: Software and IDEs installations
 * Open the PowerShell as administrator 
 * Run the Following command:
 ```ps1
-iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiate/powershell/main/Installs.ps1" -UseBasicParsing).Content
+iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiate/tinitiate-onboarding/main/software-installations/windows/install.ps1" -UseBasicParsing).Content
 ```
-
-### DB Installations
-* Once the softwares are installed, if there are any errors don't proceed to the next step.
-* Close the powershell and Reopen the powershell as administrator.
-* **MS SQL SERVER INSTALLATION** Run the Following command:
-```
-iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiate/mssql-docker/main/sql-docker-container.ps1" -UseBasicParsing).Content
-```
+### STEP 3
+* Check the installation of programs such as VSCode, DBeaver, GIT.
