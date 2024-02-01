@@ -12,7 +12,7 @@
 * Open the PowerShell as administrator 
 * Run the Following command:
 ```
-curl --remote-name https://raw.githubusercontent.com/tinitiate/powershell/main/script.sh
+curl --remote-name https://raw.githubusercontent.com/tinitiate/tinitiate-onboarding/main/software-installations/mac/script.sh
 ```
 * Run the Following Command:
 ```
