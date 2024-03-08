@@ -151,6 +151,7 @@ $checkdocker = ((gp HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*)
 if(-not($checkdocker)){
     Write-Output "Seems Docker is not installed, installing now"
     powershell choco install docker-desktop -y
+    powershell choco install docker-cli
  }
  else{
     Write-Output "Docker is already installed"
