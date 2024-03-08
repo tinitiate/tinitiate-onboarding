@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  Glue:
+    image: amazon/aws-glue-libs:glue_libs_3.0.0_image_01
+    container_name: tinitiate-glue
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:
+      - ./aws/aws_glue:/home/glue_user/.aws
+      - ./aws/aws_glue/code/:/home/glue_user/workspace/
+    environment:
+      - AWS_PROFILE:$PROFILE_NAME
+      - DISABLE_SSL:true
+    ports:
+      - 4040:4040 
+      - 18080:18080
+  kinesis:
+    build: .
+    container_name: tinitiate-kinesis
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    ports:
+      - 4567:4567
+
+networks:
+  default:
+    name: tinitiate
+    external: true

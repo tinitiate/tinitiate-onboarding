@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  postgres:
+    image: 'postgres:14'
+    restart: always
+    container_name: tinitiate_postgres
+    volumes:
+      - './postgresql/db-data:/var/lib/postgresql/data'
+      # - './postgresql/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql'
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: tinitiate
+      POSTGRES_PASSWORD: Tinitiate!23456
+      POSTGRES_DB: tinitiate
+      POSTGRES_INITDB_ARGS: '--auth-host=scram-sha-256 --auth-local=scram-sha-256'
+    logging:
+      options:
+        max-size: 10m
+        max-file: '3'
+    networks:
+      - tinitiate
+networks:
+  tinitiate:
+    name: tinitiate
+    external: true

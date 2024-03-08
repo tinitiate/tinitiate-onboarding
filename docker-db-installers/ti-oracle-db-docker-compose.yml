@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  oracledb-local:
+    image: 'container-registry.oracle.com/database/free:latest'
+    container_name: tinitiate-oracledb
+    ports:
+      - '1521:1521'
+    volumes:
+      - './oracledb:/home/oracledblocal/data'
+    working_dir: /home/oracledblocal
+    networks:
+      - tinitiate

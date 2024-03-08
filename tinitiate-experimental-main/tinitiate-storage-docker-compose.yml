@@ -1,0 +1,27 @@
+version: '3'
+services:
+  ftpd_server:
+    image: 'stilliard/pure-ftpd:latest'
+    container_name: tinitiate-ftp
+    ports:
+      - '127.0.0.1:21:21'
+    environment:
+      PUBLICHOST: localhost
+      FTP_USER_NAME: tinitiate
+      FTP_USER_PASS: tinitiate
+      FTP_USER_HOME: /home/tinitiate
+    volumes:
+      - './ftp/data:/home/ftpusers'
+      - '/home/tinitiate/tmp/dpftpd/usr/data:/home/tinitiate/'
+      - '/home/tinitiate/tmp/dpftpd/usr/passwd:/etc/pure-ftpd/passwd'
+  azureblobemulator:
+    image: mcr.microsoft.com/azure-storage/azurite
+    container_name: tinitiate-azureblob
+    ports:
+      - '10000:10000'
+      - '10001:10001'
+      - '10002:10002'
+    environment:
+      - AZURITE_ACCOUNTS=blobaccountkey1=accountkey1;blobaccountkey2=accountkey2
+    volumes:
+      - './azure/blob/data:/data'

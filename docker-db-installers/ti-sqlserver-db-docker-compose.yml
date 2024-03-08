@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  mssql:
+    image: 'mcr.microsoft.com/mssql/server:latest'
+    restart: always
+    container_name: tinitiate-mssql
+    ports:
+      - '1433:1433'
+    volumes:
+      - './mssql/mssql-data:/var/lib/mssql/data'
+      - './mssql/backup:/var/opt/mssql/backup'
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: Tinitiate!23456
+      TZ: America/New_York
+      MSSQL_AGENT_ENABLED: true
+    networks:
+      - tinitiate
+
+networks:
+  tinitiate:
+    name: tinitiate
+    external: true
+
+volumes:
+  mssql-data:
+    driver: local
