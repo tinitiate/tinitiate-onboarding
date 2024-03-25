@@ -10,7 +10,7 @@
   * SQL SERVER
     * Copy the file `ti-sqlserver-db-docker-compose.yml`
     * In command prompt navigate to the folder with file `ti-sqlserver-db-docker-compose.yml`
-    * Run `docker-compose -f ti_sqlserver_db-docker-compose.yml up -d`
+    * Run `docker-compose -f ti-sqlserver-db-docker-compose.yml up -d`
   * MySQL
     * Copy the file `ti-mysql-db-docker-compose.yml`
     * In command prompt navigate to the folder with file `ti-mysql-db-docker-compose.yml`
